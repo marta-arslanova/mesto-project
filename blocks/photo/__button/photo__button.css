@@ -1,0 +1,7 @@
+.photo__button {
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+}

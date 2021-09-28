@@ -1,0 +1,35 @@
+.profile__button {
+  box-sizing: border-box;
+  width: 150px;
+  height: 50px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+.profile__button::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.profile__button::after {
+  content: "";
+  width: 2px;
+  height: 22px;
+  background-color: #ffffff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.profile__button:hover {
+  opacity: 0.6;
+}
+@media screen and (max-width: 700px){
+  .profile__button {
+    width: 282px;
+    height: 50px;
+  }
+}

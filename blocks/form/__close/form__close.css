@@ -1,0 +1,14 @@
+.form__close {
+  background-image: url(../../../images/Close_Icon.svg);
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -36px;
+  right: 0;
+  cursor: pointer;
+}
+
+.form__close:hover {
+  background-image: url(../../../images/Close_Icon_Opacity.svg);
+}

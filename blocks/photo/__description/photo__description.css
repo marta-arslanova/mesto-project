@@ -1,0 +1,9 @@
+.photo__description {
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  padding: 25px 20px 28px 21px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}

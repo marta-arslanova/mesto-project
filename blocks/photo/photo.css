@@ -1,0 +1,5 @@
+.photo {
+  margin: 47px auto 0;
+  box-sizing: border-box;
+  width: calc(100% - 19px * 2);
+}
