@@ -1,10 +1,14 @@
 .profile__wrapper {
-  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  max-width: 350px
+
 }
 @media screen and (max-width: 700px){
   .profile__wrapper {
+    max-width: 282px;
     align-items: center;
+    justify-content: center;
   }
 }

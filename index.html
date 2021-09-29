@@ -14,77 +14,62 @@
       <img class="header__img" src="images/Vector.svg" alt="Логотип">
     </a>
   </header>
-  <div class="popup"> <!-- popup_opned -->
-    <form class="form">
-      <div class="form__close"></div>
-      <h2 class="form__title">Редактировать профиль</h2>
-      <fieldset class="form__edit-profile">
-          <input type="text" class="form__item" name="name-user" id="name-user" placeholder="Имя профиля">
-          <input type="text" class="form__item" name="descr-user" id="descr-user" placeholder="Описание профиля">
-      </fieldset>
-      <fieldset class="form__handlers">
-        <button type="submit" class='form__button' value="Сохранить">Сохранить</button>
-      </fieldset>
-  </form>
-  </div>
   <main class="main">
     <section class="profile">
       <div class="profile__info">
-        <div class="profile__avatar">
-          <img class="profile__img" src="images/avatar.jpg" alt="аватар">
-        </div>
+        <img class="profile__img" src="images/avatar.jpg" alt="аватар">
         <div class="profile__wrapper">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button class="profile__edit">
+          <button class="profile__edit"  type="button" aria-label="Редактировать">
           </button>
           <p class="profile__description">Исследователь океана</p>
         </div>
       </div>
-      <button class="profile__button">
+      <button type="button" class="profile__button" aria-label="Добавить">
       </button>
     </section>
-    <section class="photo">
-      <ul class="photo__list">
-          <li class="photo__item">
-            <img src="images/Karachaevsk.jpg" alt="Карачаевск" class="photo__img">
-            <div class="photo__description">
-              <h2 class="photo__title">Карачаевск</h2>
-              <div class="photo__like"></div>
+    <section class="cards">
+      <ul class="cards__list">
+          <li class="card">
+            <img src="images/Karachaevsk.jpg" alt="Карачаевск" class="card__img">
+            <div class="card__description">
+              <h2 class="card__title">Карачаевск</h2>
+              <button class="card__like card__like_active" type="button" aria-label="Нравится"></button>
             </div>
           </li>
-          <li class="photo__item">
-            <img src="images/Elbrus.jpg" alt="Гора Эльбрус" class="photo__img">
-            <div class="photo__description">
-              <h2 class="photo__title">Гора Эльбрус</h2>
-              <div class="photo__like"></div>
+          <li class="card">
+            <img src="images/Elbrus.jpg" alt="Гора Эльбрус" class="card__img">
+            <div class="card__description">
+              <h2 class="card__title">Гора Эльбрус</h2>
+              <button class="card__like card__like_active" type="button" aria-label="Нравится"></button>
             </div>
           </li>
-          <li class="photo__item">
-            <img src="images/Dombai.jpg" alt="Домбай" class="photo__img">
-            <div class="photo__description">
-              <h2 class="photo__title">Домбай</h2>
-              <div class="photo__like photo__like_active"></div>
+          <li class="card">
+            <img src="images/Dombai.jpg" alt="Домбай" class="card__img">
+            <div class="card__description">
+              <h2 class="card__title">Домбай</h2>
+              <button class="card__like card__like_active" type="button" aria-label="Нравится"></button>
             </div>
           </li>
-          <li class="photo__item">
-            <img src="images/Elbrus.jpg" alt="Гора Эльбрус" class="photo__img">
-            <div class="photo__description">
-              <h2 class="photo__title">Гора Эльбрус</h2>
-              <div class="photo__like"></div>
+          <li class="card">
+            <img src="images/Elbrus.jpg" alt="Гора Эльбрус" class="card__img">
+            <div class="card__description">
+              <h2 class="card__title">Гора Эльбрус</h2>
+              <button class="card__like" type="button" aria-label="Нравится"></button>
             </div>
           </li>
-          <li class="photo__item">
-            <img src="images/Dombai.jpg" alt="Домбай" class="photo__img">
-            <div class="photo__description">
-              <h2 class="photo__title">Домбай</h2>
-              <div class="photo__like"></div>
+          <li class="card">
+            <img src="images/Dombai.jpg" alt="Домбай" class="card__img">
+            <div class="card__description">
+              <h2 class="card__title">Домбай</h2>
+              <button class="card__like" type="button" aria-label="Нравится"></button>
             </div>
           </li>
-          <li class="photo__item">
-            <img src="images/Karachaevsk.jpg" alt="Карачаево-Черкессия" class="photo__img">
-            <div class="photo__description">
-              <h2 class="photo__title">Карачаево-Черкессия</h2>
-              <div class="photo__like"></div>
+          <li class="card">
+            <img src="images/Karachaevsk.jpg" alt="Карачаево-Черкессия" class="card__img">
+            <div class="card__description">
+              <h2 class="card__title">Карачаево-Черкессия</h2>
+              <button class="card__like" type="button" aria-label="Нравится"></button>
             </div>
           </li>
       </ul>
@@ -92,6 +77,17 @@
     </main>
     <footer class="footer">
      <p class="footer__copyright">&copy; 2021. Арсланова Марта</p>
+     <article class="popup"> <!-- popup_opened -->
+      <form class="form" name="popup-form">
+        <button class="form__close"></button>
+        <h2 class="form__title">Редактировать профиль</h2>
+        <fieldset class="form__edit-profile">
+            <input type="text" class="form__item" name="name-user" id="name-user" placeholder="Имя профиля">
+            <input type="text" class="form__item" name="descr-user" id="descr-user" placeholder="Описание профиля">
+        </fieldset>
+        <button type="submit" class='form__button' value="Сохранить">Сохранить</button>
+    </form>
+    </article>
     </footer>
 </body>
 </html>

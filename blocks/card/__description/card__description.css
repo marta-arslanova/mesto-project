@@ -1,4 +1,4 @@
-.photo__description {
+.card__description {
   background-color: #ffffff;
   position: relative;
   width: 100%;
@@ -6,4 +6,5 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  align-items: center;
 }

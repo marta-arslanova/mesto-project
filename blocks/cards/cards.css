@@ -1,9 +1,9 @@
-.photo {
+.cards {
   margin: 47px auto 0;
   box-sizing: border-box;
 }
 @media screen and (max-width: 1279px) {
-  .photo {
+  .cards {
     width: calc(100% - 19px * 2);
   }
 }

@@ -1,4 +1,4 @@
-.photo__img {
+.card__img {
   width: 100%;
   height: calc(100% - 80px);
 }
