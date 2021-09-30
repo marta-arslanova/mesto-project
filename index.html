@@ -28,56 +28,57 @@
       <button type="button" class="profile__button" aria-label="Добавить">
       </button>
     </section>
-    <section class="cards">
-      <div class="card">
+    <section class="cards" aria-label="Галерея фото">
+      <article class="card">
         <img src="images/Karachaevsk.jpg" alt="Карачаевск" class="card__img">
         <div class="card__description">
           <h2 class="card__title">Карачаевск</h2>
           <button class="card__like card__like_active" type="button" aria-label="Нравится"></button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+      <article class="card">
         <img src="images/Elbrus.jpg" alt="Гора Эльбрус" class="card__img">
         <div class="card__description">
           <h2 class="card__title">Гора Эльбрус</h2>
           <button class="card__like card__like_active" type="button" aria-label="Нравится"></button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+      <article class="card">
         <img src="images/Dombai.jpg" alt="Домбай" class="card__img">
         <div class="card__description">
           <h2 class="card__title">Домбай</h2>
           <button class="card__like card__like_active" type="button" aria-label="Нравится"></button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+      <article class="card">
         <img src="images/Elbrus.jpg" alt="Гора Эльбрус" class="card__img">
         <div class="card__description">
           <h2 class="card__title">Гора Эльбрус</h2>
           <button class="card__like" type="button" aria-label="Нравится"></button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+      <article class="card">
         <img src="images/Dombai.jpg" alt="Домбай" class="card__img">
         <div class="card__description">
           <h2 class="card__title">Домбай</h2>
           <button class="card__like" type="button" aria-label="Нравится"></button>
         </div>
-      </div>
-      <div class="card">
+      </article>
+      <article class="card">
         <img src="images/Karachaevsk.jpg" alt="Карачаево-Черкессия" class="card__img">
         <div class="card__description">
           <h2 class="card__title">Карачаево-Черкессия</h2>
           <button class="card__like" type="button" aria-label="Нравится"></button>
         </div>
-      </div>
+      </article>
      </section>
     </main>
     <footer class="footer">
      <p class="footer__copyright">&copy; 2021. Арсланова Марта</p>
+    </footer>
      <article class="popup"> <!-- popup_opened -->
       <form class="form" name="popup-form">
-        <button class="form__close"></button>
+        <button class="form__close" type="button" aria-label='Закрыть'></button>
         <h2 class="form__title">Редактировать профиль</h2>
         <fieldset class="form__edit-profile">
             <input type="text" class="form__item" name="name-user" id="name-user" placeholder="Имя профиля">
@@ -86,6 +87,5 @@
         <button type="submit" class='form__button' value="Сохранить">Сохранить</button>
     </form>
     </article>
-    </footer>
 </body>
 </html>
