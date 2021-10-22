@@ -131,6 +131,8 @@ function cardAdd(evt) {
   addDeleteBtnListener(cardElement);
   cardsContainer.prepend(cardElement);
   cardAddPopupClose();
+  locationNameInput.value = "";
+  locationImgLinkInput.value = "";
 }
 
 function closeImagePopup () {
