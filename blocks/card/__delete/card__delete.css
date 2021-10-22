@@ -1,0 +1,15 @@
+.card__delete {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: all 0.18s linear;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+}
+.card__delete:hover {
+  transform: scale(1.2);
+  opacity: 0.6;
+}
+.card__delete:active {
+  transform: scale(1);
+}

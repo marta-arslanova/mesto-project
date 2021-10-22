@@ -16,26 +16,30 @@
   </header>
   <main class="main">
     <section class="profile">
+      <img class="profile__img" src="images/avatar.jpg" alt="аватар">
+
       <div class="profile__info">
-        <img class="profile__img" src="images/avatar.jpg" alt="аватар">
         <div class="profile__wrapper">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <button class="profile__edit"  type="button" aria-label="Редактировать">
           </button>
-          <p class="profile__description">Исследователь океана</p>
         </div>
+
+        <p class="profile__description">Исследователь океана</p>
       </div>
+
       <button type="button" class="profile__button" aria-label="Добавить">
       </button>
     </section>
     <section class="cards" aria-label="Галерея фото">
-      <article class="card">
-        <img src="images/Karachaevsk.jpg" alt="Карачаевск" class="card__img">
-        <div class="card__description">
-          <h2 class="card__title">Карачаевск</h2>
-          <button class="card__like card__like_active" type="button" aria-label="Нравится"></button>
-        </div>
-      </article>
+  <!--<article class="card">
+      <img src="images/Trash.svg" alt="Удалить карточку" class="card__delete">
+      <img src="images/Karachaevsk.jpg" alt="Карачаевск" class="card__img">
+      <div class="card__description">
+        <h2 class="card__title">Карачаевск</h2>
+        <button class="card__like card__like_active" type="button" aria-label="Нравится"></button>
+      </div>
+    </article>
       <article class="card">
         <img src="images/Elbrus.jpg" alt="Гора Эльбрус" class="card__img">
         <div class="card__description">
@@ -58,7 +62,7 @@
         </div>
       </article>
       <article class="card">
-        <img src="images/Dombai.jpg" alt="Домбай" class="card__img">
+        <div class="card__img"></div>
         <div class="card__description">
           <h2 class="card__title">Домбай</h2>
           <button class="card__like" type="button" aria-label="Нравится"></button>
@@ -70,22 +74,57 @@
           <h2 class="card__title">Карачаево-Черкессия</h2>
           <button class="card__like" type="button" aria-label="Нравится"></button>
         </div>
-      </article>
-     </section>
+      </article>-->
+    </section> 
     </main>
     <footer class="footer">
      <p class="footer__copyright">&copy; 2021. Арсланова Марта</p>
     </footer>
-     <article class="popup"> <!-- popup_opened -->
-      <form class="form" name="popup-form">
-        <button class="form__close" type="button" aria-label='Закрыть'></button>
-        <h2 class="form__title">Редактировать профиль</h2>
-        <fieldset class="form__edit-profile">
-            <input type="text" class="form__item" name="name-user" id="name-user" placeholder="Имя профиля">
-            <input type="text" class="form__item" name="descr-user" id="descr-user" placeholder="Описание профиля">
-        </fieldset>
-        <button type="submit" class='form__button' value="Сохранить">Сохранить</button>
-    </form>
+     <article class="popup popup_type_edit"> <!-- popup_opened -->
+      <div class="popup__container">
+        <button class="popup__close" type="button" aria-label='Закрыть'></button>
+        <form class="form" name="popup-form">
+          <h2 class="form__title">Редактировать профиль</h2>
+          <fieldset class="form__edit-info">
+            <input type="text" class="form__item" name="name-user" id="user-name" placeholder="Имя профиля">
+            <input type="text" class="form__item" name="descr-user" id="user-descr" placeholder="Описание профиля">
+          </fieldset>
+          <button type="submit" class='form__button' value="Сохранить">Сохранить</button>
+        </form>
+      </div>
     </article>
+    <article class="popup popup_type_add">
+      <div class="popup__container">
+        <button class="popup__close" type="button" aria-label='Закрыть' id="formCloseAddCard"></button>
+        <form class="form" name="popup-form">
+          <h2 class="form__title">Новое место</h2>
+          <fieldset class="form__edit-info">
+            <input type="text" class="form__item" name="location-name" id="location-name" placeholder="Название места">
+            <input type="text" class="form__item" name="location-img-link" id="location-img-link" placeholder="Ссылка на картинку">
+          </fieldset>
+          <button type="submit" class='form__button' value="Создать">Создать</button>
+        </form>
+      </div>
+    </article>
+    <article class="popup popup_type_img">
+      <div class="popup__container">
+        <button class="popup__close" type="button" aria-label='Закрыть' id="popupCloseCoverImg"></button>
+        <figure class="lead">
+          <img src="images/Island.jpg" alt="Исландия" class="lead__img">
+          <figcaption class="lead__figcaption">Исландия</figcaption>
+        </figure>
+      </div>
+    </article>
+    <template id='card'>
+      <article class="card">
+        <img src="images/Trash.svg" alt="Удалить карточку" class="card__delete">
+        <div class="card__img"></div>
+        <div class="card__description">
+          <h2 class="card__title">Заголовок</h2>
+          <button class="card__like" type="button" aria-label="Нравится"></button>
+        </div>
+      </article>
+    </template>
+    <script src="scripts/index.js"></script>
 </body>
 </html>

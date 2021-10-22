@@ -1,0 +1,7 @@
+.lead__img {
+  max-width: 75vw;
+  max-height: 75vh;
+  object-fit: cover;
+  min-width: 240px;
+  min-height: 299px;
+}

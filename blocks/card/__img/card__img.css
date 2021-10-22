@@ -1,4 +1,12 @@
 .card__img {
   width: 100%;
-  height: calc(100% - 80px);
+  height: 282px; 
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-origin: content-box;
 }
+.card__img:hover{
+  cursor: pointer;
+}
+
