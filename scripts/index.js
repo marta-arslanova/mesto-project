@@ -90,7 +90,7 @@ function createCard(link, name) {
   cardLikeBtn.addEventListener('click', function () {
     cardLikeBtn.classList.toggle('card__like_active');
   });
-  
+
   cardDeleteBtn.addEventListener('click', function () {
     cardElement.remove();
   });
@@ -98,14 +98,12 @@ function createCard(link, name) {
   return cardElement;
 }
 
-function initCardList() {
-  for (let i = 0; i < initialCards.length; i++) {
-    const titleCard = initialCards[i].name;
-    const linkImageCard = initialCards[i].link;
-    const cardElement = createCard(linkImageCard, titleCard);
-    cardsContainer.append(cardElement);
-  }
-}
+initialCards.forEach(function (card) {
+  const titleCard = card.name;
+  const linkImageCard = card.link;
+  const cardElement = createCard(linkImageCard, titleCard);
+  cardsContainer.append(cardElement);
+});
 
 function cardAdd(evt) {
   evt.preventDefault();
@@ -114,8 +112,7 @@ function cardAdd(evt) {
   const cardElement = createCard(linkImageCard, titleCard);
   cardsContainer.prepend(cardElement);
   closePopup(cardAddPopup);
-  locationNameInput.value = '';
-  locationImgLinkInput.value = '';
+  cardAddForm.reset();
 }
 
 // Обработчики
