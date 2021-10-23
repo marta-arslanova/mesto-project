@@ -73,45 +73,35 @@ function profileEditFormSubmit(evt) {
   profileEditPopupClose();
 }
 
-function createCardElement(link, title) {
+function createCard(link, name) {
   const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
   const cardImage = cardElement.querySelector('.card__img');
+  const cardLikeBtn = cardElement.querySelector('.card__like');
+  const cardDeleteBtn = cardElement.querySelector('.card__delete');
   cardImage.style.backgroundImage = `url(${link})`;
-  cardElement.querySelector('.card__title').textContent = title;
-  return cardElement;
-}
+  cardElement.querySelector('.card__title').textContent = name;
 
-function addImageListener(cardElement, link, title) {
-  const cardImage = cardElement.querySelector('.card__img');
   cardImage.addEventListener('click', function () {
     imageLeadElement.src = link;
-    figcaptionLeadElement.textContent = title;
+    figcaptionLeadElement.textContent = name;
     openPopup(imagePopup);
   });
-}
-
-function addLikeBtnListener(cardElement) {
-  const cardLikeBtn = cardElement.querySelector('.card__like');
-  cardLikeBtn.addEventListener('click', function (event) {
-    event.target.classList.toggle('card__like_active');
+  cardLikeBtn.addEventListener('click', function () {
+    cardLikeBtn.classList.toggle('card__like_active');
   });
-}
-
-function addDeleteBtnListener(cardElement) {
-  const cardDeleteBtn = cardElement.querySelector('.card__delete');
+  
   cardDeleteBtn.addEventListener('click', function () {
     cardElement.remove();
   });
+
+  return cardElement;
 }
 
 function initCardList() {
   for (let i = 0; i < initialCards.length; i++) {
     const titleCard = initialCards[i].name;
     const linkImageCard = initialCards[i].link;
-    const cardElement = createCardElement(linkImageCard, titleCard);
-    addImageListener(cardElement, linkImageCard, titleCard);
-    addLikeBtnListener(cardElement);
-    addDeleteBtnListener(cardElement);
+    const cardElement = createCard(linkImageCard, titleCard);
     cardsContainer.append(cardElement);
   }
 }
@@ -120,10 +110,7 @@ function cardAdd(evt) {
   evt.preventDefault();
   const titleCard = locationNameInput.value;
   const linkImageCard = locationImgLinkInput.value;
-  const cardElement = createCardElement(linkImageCard, titleCard);
-  addImageListener(cardElement, linkImageCard, titleCard);
-  addLikeBtnListener(cardElement);
-  addDeleteBtnListener(cardElement);
+  const cardElement = createCard(linkImageCard, titleCard);
   cardsContainer.prepend(cardElement);
   closePopup(cardAddPopup);
   locationNameInput.value = '';
