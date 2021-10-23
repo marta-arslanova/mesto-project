@@ -98,12 +98,14 @@ function createCard(link, name) {
   return cardElement;
 }
 
-initialCards.forEach(function (card) {
-  const titleCard = card.name;
-  const linkImageCard = card.link;
-  const cardElement = createCard(linkImageCard, titleCard);
-  cardsContainer.append(cardElement);
-});
+function initCardList() {
+  initialCards.forEach(function (card) {
+    const titleCard = card.name;
+    const linkImageCard = card.link;
+    const cardElement = createCard(linkImageCard, titleCard);
+    cardsContainer.append(cardElement);
+  });
+}
 
 function cardAdd(evt) {
   evt.preventDefault();
