@@ -98,12 +98,16 @@ function createCard(link, name) {
   return cardElement;
 }
 
+function renderCard(image, title, container) {
+  const cardElement = createCard(image, title);
+  container.append(cardElement);
+}
+
 function initCardList() {
   initialCards.forEach(function (card) {
     const titleCard = card.name;
     const linkImageCard = card.link;
-    const cardElement = createCard(linkImageCard, titleCard);
-    cardsContainer.append(cardElement);
+    renderCard(linkImageCard, titleCard, cardsContainer);
   });
 }
 
@@ -111,8 +115,7 @@ function cardAdd(evt) {
   evt.preventDefault();
   const titleCard = locationNameInput.value;
   const linkImageCard = locationImgLinkInput.value;
-  const cardElement = createCard(linkImageCard, titleCard);
-  cardsContainer.prepend(cardElement);
+  renderCard(linkImageCard, titleCard, cardsContainer);
   closePopup(cardAddPopup);
   cardAddForm.reset();
 }
