@@ -100,7 +100,7 @@ function createCard(link, name) {
 
 function renderCard(image, title, container) {
   const cardElement = createCard(image, title);
-  container.append(cardElement);
+  container.prepend(cardElement);
 }
 
 function initCardList() {
